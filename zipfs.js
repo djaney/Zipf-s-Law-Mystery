@@ -28,7 +28,7 @@ function printPrediction(rankings, i){
     var prediction = (rankings[0].count/i).toFixed(0);
     var actual = rankings[i].count;
     var diff = Math.abs(prediction - actual);
-        console.log("According to Zif's Law, the word \""+theWord+"\" should occur "+prediction+" times. It occurred "+actual+" times. Off the mark by "+diff+".");
+        console.log("According to Zipf's Law, the word \""+theWord+"\" should occur "+prediction+" times. It occurred "+actual+" times. Off the mark by "+diff+".");
 }
 function rankWords(book){
     var words = book.replace(/\s+/g, ' ').split(" ");

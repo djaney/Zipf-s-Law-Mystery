@@ -16,6 +16,11 @@ fs.readFile(filename, 'utf8', function (err,data) {
     }
     var rankings = rankWords(data);
 
+    if(guess < 1){
+        console.log("try a number bigger than 0 ");
+        process.exit();
+    }
+
     if(guess >= rankings.length){
         console.log("try a number smaller than " + rankings.length);
         process.exit();
